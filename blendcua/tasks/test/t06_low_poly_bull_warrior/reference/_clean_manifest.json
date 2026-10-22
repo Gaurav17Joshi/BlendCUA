@@ -1,0 +1,10 @@
+{
+  "prompt": "The image shows a low-poly flat-shaded red minotaur warrior with cream horns, holding a wooden-handled axe in his right hand and a large white-rimmed brown wooden shield on his left arm, with dark blue spikes on his back, standing on a light grey floor slab. Remove the white hand-drawn arrow at the top left. Replace the grey-and-dark-grey checkerboard transparency pattern behind the figure with a plain, flat, even mid-grey studio backdrop with no pattern, and let the light grey floor continue as a plain floor under the figure. Keep the object itself exactly as it is: the same shape, proportions, pose, colours, materials, surface detail, lighting and camera angle, in the same place and at the same size in the frame. Do not redesign, restyle, smooth, sharpen or re-light the object, and do not add anything. No text, no logo, no watermark, no frame.",
+  "size": "1024x1024",
+  "seconds": 108.9,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "source": "reference/original.png",
+  "made": "2026-09-19"
+}

@@ -1,0 +1,16 @@
+[
+ {
+  "out": "side_fix_1.png",
+  "source": "archive\\side_plate_wheel_forward.png",
+  "prompt": "The supplied image is a straight-on LEFT-SIDE profile of a 3D cartoon robot on a plain grey ground: a retro TV set head (screen facing left), two antennae, an orange puffy jacket seen from the side with the near sleeve and a chrome claw hand below its cuff, a grey metal box chassis under the jacket hem, and a single large black ribbed tyre seen as a full circle, its upper part inside the chassis and its lower part below it touching the ground. The tyre is currently placed too far forward (to the left), sticking out in front of the chassis. Reproduce the image EXACTLY -- same robot, same size, same framing, same view, same colours, same grey background -- with ONE change: move the tyre backward (to the right) so that its centre is directly below the centre of the chassis and of the jacket, the tyre sitting symmetrically inside the chassis with the same amount of tread showing in front of and behind the chassis, still touching the ground at the bottom. The chassis, jacket, hand, head and antennae do not move. No text, no watermark.",
+  "seconds": 74.0,
+  "error": null
+ },
+ {
+  "out": "side_fix_2.png",
+  "source": "archive\\side_plate_wheel_forward.png",
+  "prompt": "The supplied image is a straight-on LEFT-SIDE profile of a 3D cartoon robot on a plain grey ground: a retro TV set head (screen facing left), two antennae, an orange puffy jacket seen from the side with the near sleeve and a chrome claw hand below its cuff, a grey metal box chassis under the jacket hem, and a single large black ribbed tyre seen as a full circle, its upper part inside the chassis and its lower part below it touching the ground. The tyre is currently placed too far forward (to the left), sticking out in front of the chassis. Reproduce the image EXACTLY -- same robot, same size, same framing, same view, same colours, same grey background -- with ONE change: move the tyre backward (to the right) so that its centre is directly below the centre of the chassis and of the jacket, the tyre sitting symmetrically inside the chassis with the same amount of tread showing in front of and behind the chassis, still touching the ground at the bottom. The chassis, jacket, hand, head and antennae do not move. No text, no watermark.",
+  "seconds": 75.8,
+  "error": null
+ }
+]

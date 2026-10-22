@@ -1,0 +1,11 @@
+{
+  "prompt": "The supplied image is a low-poly model of a sitting rabbit, used here only as a guide to the pose and colouring. Produce a realistic PHOTOGRAPH of a real rabbit: a wild brown rabbit with a tan-brown coat, a cream belly and chest, pale inner ears and a small white tail, sitting in the same upright pose - front legs straight down, long hind feet flat on the ground, both ears raised. Strict LEFT-SIDE profile: the rabbit faces left, the camera is level with its body and exactly side-on, so it is seen edge-on in pure profile with only one eye visible. The whole rabbit including ears, feet and tail in frame with a small margin, on a PURE WHITE background - pure white, RGB 255/255/255, no grey tone, no gradient, no vignette and no shadow, even soft light. Natural fur, sharp focus, no stylisation, no low-poly facets, no text.",
+  "size": "1536x1024",
+  "seconds": 71.0,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "made": "2026-09-19",
+  "note": "reference.png: realistic left-side photo generated from the low-poly style image (source path was reference/original.png, now reference/low_poly_style.png)",
+  "source": "low_poly_rabbit/reference/original.png"
+}

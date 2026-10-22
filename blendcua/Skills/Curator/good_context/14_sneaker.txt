@@ -1,0 +1,51 @@
+14_sneaker   (run 14_sneaker_run_001)
+==========================================
+Human judgement, written after looking at the reference photo, final_render.png, the top and
+front views, a few step screenshots and (lightly) the plan. This is what a person says is
+wrong, why it went wrong, and what to do about it. Severity: M = major (noticed at once),
+m = minor. Classes: plan / exec / review / views (a number the single photo could not give) /
+tool (the operation does not exist yet).
+
+1. DEFECTS
+
+#  sev  defect
+1  M    The shape of the shoe is not very good; it does not follow the reference well. The part
+        where the foot goes in is flat from the side, and the front near the toe is also flat:
+        it stays flat and then abruptly goes down instead of curving. I know it is low poly, but
+        low poly should still follow the form.
+2  M    The laces are pushed toward our side and are somewhat floating above the shoe. They were
+        placed to make the render look like the image rather than to be laces on a modelled shoe.
+3  m    The place where the foot goes has no hole.
+
+
+2. BLAME
+
+#  class           why
+1  plan + exec     Overall just bad planning and scripting in the execution of the basic
+                   structure. Look at step_001/screenshots/action_05_shoe_silhouette.png: the
+                   silhouette is not matching the shoe at all, a glossed-over job. It should have
+                   done each part better and tried to map it properly: get the important points,
+                   do a proper mapping, and a better shoe body follows. The body was half done.
+2  exec (approach) The modelling focused on making it look like the image instead of making the
+                   model of the object better. That is what caused the laces to be off the
+                   centreline and not even touching the shoe, a huge error for a small gain.
+                   Chase the image only when the task explicitly tells you to.
+3  plan            The plan never asks for the collar opening as an actual hole.
+
+   The paint work, the swoosh and the sole were good; effort was clearly spent there.
+
+
+3. FIX
+
+#  fix
+1  Better planning and better scripting of the step 1 body so it is not a half done job. The
+   silhouette has about 11 points in each column, which is fine (13 to 14 would be fine too),
+   but they are not matched to the image properly. Match each station to the shoe outline:
+   rounded toe, raised collar, proper instep. Reviewer check: silhouette overlay at heel, instep
+   and toe, not only a bounding box.
+2  A durable rule for planner and executor: model the object, do not chase the picture. Laces
+   sit on the tongue, on the centreline, touching the upper.
+3  Cut the collar opening into the upper.
+
+
+4. OTHER

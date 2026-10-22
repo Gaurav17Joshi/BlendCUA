@@ -1,0 +1,7 @@
+{
+ "plate": "edited.png",
+ "source": "original.png",
+ "prompt": "The supplied image is a 3D render of a glossy pink cartoon mug of hot chocolate with a black cartoon face, whipped cream on top with chocolate sauce drizzled over it and dripping down the outside of the mug, cocoa dust on the cream, mini marshmallows on the cream and a striped candy cane leaning in the cup, standing on a wooden table with a blurred wooden background. Keep the mug and everything ON it and IN it EXACTLY as it is: same position, same size, same viewpoint, same face, same drips, same cream, same marshmallows on the cream, same candy cane. Remove every object lying on the table around the mug: all the loose mini marshmallows, the round peppermint swirl candy and the dark chocolate squares, and the small specks floating in the air. Fill the cleared table with the same plain wooden surface, continuous grain, with the mug's soft shadow and reflection kept. Same lighting, same wooden background, no text, no watermark.",
+ "seconds": 78.6,
+ "error": null
+}

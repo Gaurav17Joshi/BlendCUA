@@ -1,0 +1,35 @@
+[
+ {
+  "option": "E1",
+  "out": "option_E1.png",
+  "inputs": [
+   "option_A.png",
+   "option_B.png"
+  ],
+  "prompt": "The FIRST supplied image is a 3D cartoon robot character: a retro TV set for a head with a glowing face, two antennae, an orange puffy zip-up jacket for the body, thin dark blue rod arms ending in chrome ball hands with three fingers, and instead of legs a single large black ribbed tyre wheel held in a grey metal fork under the jacket hem, on a plain blue backdrop. The SECOND supplied image is the same character drawn with different proportions; use it ONLY as the reference for two parts: its wheel mount and its hands. Produce the FIRST image with its EXACT proportions, size, framing, pose and viewpoint unchanged -- same TV head size relative to the body, same jacket, same rod arms, same blue backdrop, whole character complete in frame with a margin below the wheel -- and only these two changes: (1) WHEEL MOUNT: replace the grey metal fork with the wheel housing from the second image: a short grey metal box chassis sitting directly under the jacket hem, as wide as the hem, with the black ribbed tyre half hidden inside it so only its lower half shows below the chassis and rests on the ground. (2) HANDS: replace the hands with the hands from the second image: a polished chrome ball at the end of each arm with three simple curved chrome claw-like fingers, slightly spread. Nothing else changes. No text, no watermark.",
+  "seconds": 79.5,
+  "error": null
+ },
+ {
+  "option": "E2",
+  "out": "option_E2.png",
+  "inputs": [
+   "option_A.png",
+   "option_B.png"
+  ],
+  "prompt": "The FIRST supplied image is a 3D cartoon robot character: a retro TV set for a head with a glowing face, two antennae, an orange puffy zip-up jacket for the body, thin dark blue rod arms ending in chrome ball hands with three fingers, and instead of legs a single large black ribbed tyre wheel held in a grey metal fork under the jacket hem, on a plain blue backdrop. The SECOND supplied image is the same character drawn with different proportions; use it ONLY as the reference for two parts: its wheel mount and its hands. Produce the FIRST image with its EXACT proportions, size, framing, pose and viewpoint unchanged -- same TV head size relative to the body, same jacket, same rod arms, same blue backdrop, whole character complete in frame with a margin below the wheel -- and only these two changes: (1) WHEEL MOUNT: replace the grey metal fork with the wheel housing from the second image: a short grey metal box chassis sitting directly under the jacket hem, as wide as the hem, with the black ribbed tyre half hidden inside it so only its lower half shows below the chassis and rests on the ground. (2) HANDS: replace the hands with the hands from the second image: a polished chrome ball at the end of each arm with three simple curved chrome claw-like fingers, slightly spread. Nothing else changes. No text, no watermark.",
+  "seconds": 77.6,
+  "error": null
+ },
+ {
+  "option": "E3",
+  "out": "option_E3.png",
+  "inputs": [
+   "option_A.png",
+   "option_B.png"
+  ],
+  "prompt": "The FIRST supplied image is a 3D cartoon robot character: a retro TV set for a head with a glowing face, two antennae, an orange puffy zip-up jacket for the body, thin dark blue rod arms ending in chrome ball hands with three fingers, and instead of legs a single large black ribbed tyre wheel held in a grey metal fork under the jacket hem, on a plain blue backdrop. The SECOND supplied image is the same character drawn with different proportions; use it ONLY as the reference for two parts: its wheel mount and its hands. Produce the FIRST image with its EXACT proportions, size, framing, pose and viewpoint unchanged -- same TV head size relative to the body, same jacket, same rod arms, same blue backdrop, whole character complete in frame with a margin below the wheel -- and only these two changes: (1) WHEEL MOUNT: replace the grey metal fork with the wheel housing from the second image: a short grey metal box chassis sitting directly under the jacket hem, as wide as the hem, with the black ribbed tyre half hidden inside it so only its lower half shows below the chassis and rests on the ground. (2) HANDS: replace the hands with the hands from the second image: a polished chrome ball at the end of each arm with three simple curved chrome claw-like fingers, slightly spread. Nothing else changes. No text, no watermark.",
+  "seconds": 77.6,
+  "error": null
+ }
+]

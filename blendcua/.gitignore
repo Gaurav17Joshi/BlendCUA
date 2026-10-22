@@ -1,0 +1,71 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+
+# Belt and braces: keys live OUTSIDE this repo (see core.load_api_keys),
+# but never let a stray copy or the per-run Hermes config be committable.
+*.env.txt
+.hermes_home/
+
+# --- Run artifacts: regenerable, and huge. Kept locally in BlendCuaLoop_try. ---
+
+# Blender scene files (~220 MB across the tree)
+*.blend
+*.blend1
+
+# Per-step screenshots / overlay renders / crops under mem (~1.7 GB)
+mem/**/*.png
+mem/**/*.jpg
+mem/**/*.jpeg
+
+# Final-blend staging dir
+blends/
+
+# Completed/<run>/run is a byte-identical copy of the matching mem/<run>;
+# the META.json + README.md beside it are the unique part and ARE tracked.
+Completed/*/run/
+
+# Terminal captures, server logs, loop logs
+*.log
+
+# Vendored Pillow for Blender's own bundled interpreter (Windows) — platform
+# and Blender-Python-version specific binary wheel, install it fresh with:
+#   "<blender>\5.2\python\bin\python.exe" -m pip install --target=Tool_scripts/Tools_code/_vendor Pillow
+Tool_scripts/Tools_code/_vendor/
+
+# --- Replay compatibility junctions (Windows) -------------------------------
+# Three runs were renumbered after they were built and the run name inside
+# use(...) was never updated (01_cardboard_box -> "02_cardboard_box_run_001",
+# 02_chess_staunton -> "04_chess_staunton_run_001", 03_wine_glass ->
+# "05_wine_glass_run_001"). The stale name also appears in absolute path
+# literals inside those actions, so rewriting use() alone is not enough.
+# Directory junctions pointed at the real run dirs make every one of those
+# paths resolve without touching a single action file. Recreate with:
+#   mklink /J mem\02_cardboard_box_run_001  mem\01_cardboard_box_run_001
+#   mklink /J mem\04_chess_staunton_run_001 mem\02_chess_staunton_run_001
+#   mklink /J mem\05_wine_glass_run_001     mem\03_wine_glass_run_001
+mem/02_cardboard_box_run_001/
+mem/04_chess_staunton_run_001/
+mem/05_wine_glass_run_001/
+
+# The same renumbering also left two runs pointing at plans/ directories under
+# their OLD task names (02_chess_staunton reads plans/04_chess_staunton,
+# 03_wine_glass reads plans/05_wine_glass), so those need junctions too:
+#   mklink /J plans_chess_staunton plans_chess_staunton
+#   mklink /J plans_wine_glass     plans_wine_glass
+plans/04_chess_staunton/
+plans/05_wine_glass/
+
+# Scratch file written by win_fit_viewport.py when probing the viewport size.
+mem/.viewport_probe.json
+
+# run outputs of this folder
+synth_views/
+run_v2_state.json
+vb/state/
+vb/harness_log.jsonl
+harness/
+run_v2_dualtest.log
+lessons_test.log
+salvage_test.log

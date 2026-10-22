@@ -1,0 +1,68 @@
+06_tablecloth_drape   (run 06_tablecloth_drape_run_001; loop rebuild run_002; hand build run_003)
+==========================================
+Human judgement, written after looking at the reference photo, the renders of run_001 and of
+the loop's rebuild (run_002), the checker's list, the blame agent's remedy, the plan's scripts
+folder and the executor's (empty) scripts folder. This is what a person says is wrong, why it
+went wrong, and what to do about it. Severity: M = major (noticed at once), m = minor.
+Classes: plan / exec / review / views / tool.
+
+1. DEFECTS
+
+#  sev  defect
+1  M    The pedestal legs are round tubes bent into spiral loops. The photo has broad flat
+        cabriole legs: an S-curve with a wide knee at the collar, a narrowing ankle and a
+        scroll toe, on a turned column with a bulb and a neck. Everything else in run_001 —
+        tabletop, column, cloth at frame 90, framing — is fine.
+2  m    The wood is lighter and duller than the photo's lacquer (median 93/54/39 against
+        67/36/27, few sharp highlights).
+
+   The checker's two majors (foot profile, drape profile) were the right two things to look
+   at; a person would have called the cloth acceptable and put the whole round on the legs.
+
+
+2. BLAME
+
+#  class          why
+1  plan + exec    Nobody read the legs out of the photo. The planner's measure_silhouette.py
+                  made a clean mask of the pedestal and reduced it to a bounding box (470x336,
+                  0.50 of the cloth width, feet at v 0.916). The plan said "three radial
+                  cabriole legs" (run_001) and then "a broad, flattened, carved-looking
+                  three-branch support over three broad occupied paths" (the rebuild) and gave
+                  one span number to hit. The executor's step-1 scripts folder is empty in
+                  both runs; the rebuild's action header says "the scale is deliberately
+                  convenient rather than copied from pixels". The shape was typed, twice.
+2  review         The step-1 reviewer passed a branch count, a shared root and a depth/width
+                  ratio. All three were satisfied by three bent flat hooks.
+3  curator        The remedy changed the adjectives and kept the method, and chose R2 from
+                  step 1 for both majors at once, so the good cloth was thrown away with the
+                  bad legs and two hours produced something worse. The right remedy was the
+                  read: mask, row table, the outline traced into a polygon, built from that
+                  file, checked by the outline back on the photo — legs only, cloth kept.
+
+   Not a views fault: the photo is a near-front elevation of the legs and the mask was one
+   row-walk from the shape. (Contrast the skull, whose cross-section no single photo gives
+   and which needed the plates.)
+
+
+3. FIX
+
+#  fix
+1  Trace the legs from the photo and extrude them. Done by hand as run_003 on top of run_001:
+   wood mask, row table every 10 px (neck at y 683 half-width 25 px, side toes on the floor
+   at y 845, L = 271 px, camera pitch 13.5 deg from the near toe), the left leg's outline as a
+   661-pixel boundary resampled to 133 points, mapped into the leg's plane, extruded to the
+   front leg's measured thickness (0.124 L), three copies at 120 deg, root buried in the
+   column, the column's onion collar compressed to a neck. Side legs within 8-11 px of the
+   photo's outline on 1024 px. ~200 lines of image reading, 60 of Blender. Tool: outline_trace.
+2  Wood: base colour scaled by (photo/render)^2.2 per channel, roughness 0.30 -> 0.13, clear
+   coat 0.3 (0.6 mirrored the grey backdrop and turned the wood grey). Median 76/45/41.
+3  For the harness: a construction step with an empty scripts folder is "Try again" on its
+   own, and the blame agent's first question is "was the reference measured?" before any
+   other class (human-judgement rule 9).
+
+
+4. OTHER
+   The cloth of run_001 was kept as it was: a clean square with long corner points and a
+   gentle scallop, close enough that the remaining difference is the camera (closer and
+   steeper than the photo's). The curator's five cloth gates (bands of 0.006 in normalised
+   height) were tighter than a solver can hit and sent the rebuild into crumpled candidates.

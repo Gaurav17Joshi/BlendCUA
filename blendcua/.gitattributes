@@ -1,0 +1,5 @@
+# skills and checklists are add-only: both sides of an overlap are kept
+Skills/**/*.md merge=union
+# generated indexes are never merged, they are regenerated after the merge
+Tool_scripts/Tools_ref/INDEX.md merge=ours
+prompt_files/current_tools.md merge=ours

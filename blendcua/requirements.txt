@@ -1,0 +1,8 @@
+# Python 3.12. Do not install `mcp` on its own: mcp 2.x breaks the dispatch server;
+# hermes-agent[mcp]==0.19.0 pins mcp==1.26.0.
+hermes-agent[mcp]==0.19.0
+openai
+pyyaml
+pillow
+numpy
+anyio

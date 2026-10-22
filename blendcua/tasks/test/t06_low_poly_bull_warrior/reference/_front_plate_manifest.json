@@ -1,0 +1,11 @@
+{
+  "prompt": "The supplied image shows a low-poly flat-shaded red bull-headed warrior (minotaur) with two cream horns, black boots, a row of dark blue spikes down his back, a wooden-handled axe with a grey faceted blade in his right hand and a large shield (brown wooden face in a thick white faceted rim) on his left arm. Produce a straight-on FRONT elevation of the same character: the camera is level with his chest and looks straight at his front, so his body is bilaterally symmetrical, both horns, both shoulders, both arms and both boots read symmetrically. He stands upright, feet slightly apart; the axe hangs in his right hand at his side, head down, and the shield is held on his left forearm at his side, seen edge-on-ish so it does not hide his body. This is a modelling reference plate, not an art piece. Keep the SAME character identity, proportions, colours, flat-shaded faceted low-poly look and facet layout as the supplied image; do not restyle, smooth or redesign it. Use a long-lens, near-orthographic level camera so the view reads flat. Whole figure centred in frame with a small margin, on a PURE WHITE background - pure white, RGB 255/255/255, no grey tone, no gradient, no vignette and no shadow. No text, no labels, no floor, no extra props, no second copy.",
+  "size": "1024x1536",
+  "seconds": 74.3,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "made": "2026-09-19",
+  "note": "front_plate.png",
+  "source": "low_poly_bull_warrior/reference.png"
+}

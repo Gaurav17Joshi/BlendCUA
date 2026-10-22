@@ -1,0 +1,120 @@
+18_thors_hammer: three candidate prompts for the upright front plate
+====================================================================
+
+Target for all three: the same deliverable as 00_upright_front.png, i.e. the
+tilted three-quarter reference turned upright and seen from the front.
+
+Run each against reference.png, size 1024x1536 (PORTRAIT), quality medium, so
+they are directly comparable with the existing 00_upright_front.png.
+
+Each prompt below is written to FOLLOW S_HAMMER, exactly like every other job
+in generate_views_gpt_image.py. Do not paste the object description in again.
+
+The closing two sentences are identical in all three, on purpose. The only
+thing that varies is how much is said about the head. None of the three uses a
+negation. See the note at the bottom.
+
+
+PROMPT A: say nothing about the head
+------------------------------------
+Tests whether the failure was caused purely by the false clause in the original
+("the two gold bands horizontal") and disappears the moment it is deleted. If A
+works, B and C are unnecessary and everything after this is noise.
+
+In the supplied image the hammer is tilted diagonally across the frame. Rotate
+it anticlockwise until it stands upright, and show it from straight in front:
+the handle vertical with the pommel at the bottom and the head at the top. It
+is the same hammer, unchanged apart from the turn: same shape, same
+proportions, same materials, same stylised look. Centre it on a flat neutral
+light-grey background. No text, no extra objects.
+
+
+PROMPT B: locate the striking faces
+-----------------------------------
+A is plus one clause. The clause names where the two striking faces end up,
+which fixes the head's orientation without ever mentioning the gold bands or an
+angle. The bands are attached to the faces, so their orientation follows on its
+own. Tests whether one positive structural clause is enough.
+
+In the supplied image the hammer is tilted diagonally across the frame. Rotate
+it anticlockwise until it stands upright, and show it from straight in front:
+the handle vertical with the pommel at the bottom, and the stone head lying
+horizontally across the top with a flat striking face at each end, one on the
+left and one on the right, and the handle rising from the middle of the head's
+underside. It is the same hammer, unchanged apart from the turn: same shape,
+same proportions, same materials, same stylised look. Centre it on a flat
+neutral light-grey background. No text, no extra objects.
+
+
+PROMPT C: describe the current configuration and require it to survive
+----------------------------------------------------------------------
+Anchors the head-to-handle relationship to something visible in the input image
+rather than to a target the model has to take on trust, and asks for a rigid
+turn rather than a re-render. Tests whether pointing at the reference beats
+describing the destination.
+
+The hammer is a single rigid object: the stone head is fixed to the handle at
+right angles and cannot turn on it, so the head and the handle turn together by
+the same amount. In the supplied image the handle points up to the right and
+the head's long axis crosses it at right angles, running from upper left to
+lower right. Keep that right angle exactly as it is and rotate the whole object
+anticlockwise until the handle is vertical with the pommel at the bottom, then
+look at it from straight in front. Same shape, same proportions, same
+materials, same stylised look. Centre it on a flat neutral light-grey
+background. No text, no extra objects.
+
+
+How to score them
+-----------------
+Two independent checks. A plate can pass one and fail the other, so record them
+separately.
+
+1. Head orientation. Correct: the head is a horizontal block, wider than it is
+   tall, a striking face at the extreme left and the extreme right, and the two
+   gold bands running VERTICALLY, one near each end. Wrong: the bands run
+   horizontally across the top and bottom of the head, which means the head has
+   been turned 90 degrees on the handle. That is what 00_upright_front.png did.
+
+   Measured on reference.png for comparison: handle axis 31.8 degrees, gold
+   bands 25.9 and 23.5 degrees, head long axis 113.4 degrees. So the bands sit
+   within about 7 degrees of the handle, and the head crosses it at 81.6
+   degrees. In 00_upright_front.png the handle is at 90 and the bands are at 0,
+   i.e. the handle turned 58 degrees anticlockwise while the head turned 23
+   degrees clockwise.
+
+   This is worth automating: PCA the red wrap pixels for the handle axis and
+   the gold pixels for the band axis, and flag any plate where the angle
+   between them moves more than about 10 degrees from the reference. Twenty
+   lines, and it catches the whole failure class across every task without
+   anyone looking at the images.
+
+2. Is it actually front-on. Upright and front are two separate operations, and
+   all three prompts ask for both at once. A plate that comes back upright but
+   still at a three-quarter angle has failed check 2 while possibly passing
+   check 1. If that happens on all three, split it into two calls: an in-plane
+   picture rotation first, then a camera swing off that output.
+
+Also worth noting for check 2: neither 00_upright_front.png nor 01_side.png is
+a true elevation. Both look down on the head by roughly 10 degrees, so the top
+face is visible in both. Watch for that here too.
+
+
+On negation
+-----------
+None of the three says what must not appear, even though the obvious guard
+would be "the bands are not horizontal". That is deliberate: image models
+handle negation poorly and often reproduce the thing being forbidden.
+
+But that cuts against the evidence in this repo. REVIEW.md Lesson A found that
+naming what must NOT be in frame is exactly what fixed 04_datestone_1934/02_top,
+06_iron_gate/02_top, 11_umbrella/02_side and 12_tablecloth_drape/02_side. Those
+were cases where the model was hiding a surface it did not want to give up,
+which may be a different problem from this one.
+
+So if all three fail, the natural fourth cell is B with one sentence appended:
+
+  The two gold bands must NOT run horizontally across the top and bottom of the
+  head.
+
+Run that only if it is needed. If it is needed, that is a real finding about
+when negation helps and when it backfires, and it belongs in REVIEW.md.

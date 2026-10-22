@@ -1,0 +1,237 @@
+{
+  "image": {
+    "width": 1024,
+    "height": 1536
+  },
+  "dark_body_profile": [
+    {
+      "y": 160,
+      "left": 289,
+      "right": 741,
+      "width": 453,
+      "bg_median": 208.67
+    },
+    {
+      "y": 180,
+      "left": 286,
+      "right": 744,
+      "width": 459,
+      "bg_median": 208.67
+    },
+    {
+      "y": 200,
+      "left": 277,
+      "right": 752,
+      "width": 476,
+      "bg_median": 208.67
+    },
+    {
+      "y": 220,
+      "left": 268,
+      "right": 761,
+      "width": 494,
+      "bg_median": 208.67
+    },
+    {
+      "y": 240,
+      "left": 267,
+      "right": 762,
+      "width": 496,
+      "bg_median": 209.0
+    },
+    {
+      "y": 270,
+      "left": 267,
+      "right": 762,
+      "width": 496,
+      "bg_median": 209.0
+    },
+    {
+      "y": 300,
+      "left": 267,
+      "right": 762,
+      "width": 496,
+      "bg_median": 209.0
+    },
+    {
+      "y": 350,
+      "left": 267,
+      "right": 762,
+      "width": 496,
+      "bg_median": 209.33
+    },
+    {
+      "y": 450,
+      "left": 267,
+      "right": 762,
+      "width": 496,
+      "bg_median": 209.33
+    },
+    {
+      "y": 600,
+      "left": 267,
+      "right": 761,
+      "width": 495,
+      "bg_median": 209.33
+    },
+    {
+      "y": 800,
+      "left": 267,
+      "right": 761,
+      "width": 495,
+      "bg_median": 209.67
+    },
+    {
+      "y": 950,
+      "left": 267,
+      "right": 761,
+      "width": 495,
+      "bg_median": 210.0
+    },
+    {
+      "y": 1050,
+      "left": 267,
+      "right": 761,
+      "width": 495,
+      "bg_median": 209.67
+    },
+    {
+      "y": 1150,
+      "left": 267,
+      "right": 761,
+      "width": 495,
+      "bg_median": 209.67
+    },
+    {
+      "y": 1250,
+      "left": 267,
+      "right": 761,
+      "width": 495,
+      "bg_median": 209.67
+    },
+    {
+      "y": 1350,
+      "left": 267,
+      "right": 761,
+      "width": 495,
+      "bg_median": 209.67
+    },
+    {
+      "y": 1380,
+      "left": 268,
+      "right": 760,
+      "width": 493,
+      "bg_median": 209.67
+    },
+    {
+      "y": 1400,
+      "left": 303,
+      "right": 750,
+      "width": 448,
+      "bg_median": 209.67
+    },
+    {
+      "y": 1420,
+      "left": 306,
+      "right": 730,
+      "width": 425,
+      "bg_median": 209.67
+    }
+  ],
+  "logo_green_bbox_px": [
+    297,
+    269,
+    719,
+    939
+  ],
+  "logo_green_bbox_norm": [
+    0.2900390625,
+    0.17513020833333334,
+    0.7021484375,
+    0.611328125
+  ],
+  "bright_graphic_bands_px": [
+    [
+      109,
+      130,
+      279
+    ],
+    [
+      146,
+      196,
+      108
+    ],
+    [
+      268,
+      268,
+      8
+    ],
+    [
+      280,
+      853,
+      44
+    ],
+    [
+      859,
+      859,
+      9
+    ],
+    [
+      864,
+      865,
+      8
+    ],
+    [
+      874,
+      878,
+      8
+    ],
+    [
+      1008,
+      1123,
+      290
+    ],
+    [
+      1144,
+      1183,
+      90
+    ],
+    [
+      1254,
+      1364,
+      113
+    ],
+    [
+      1406,
+      1434,
+      348
+    ],
+    [
+      1442,
+      1460,
+      257
+    ]
+  ],
+  "neutral_metal_bands_px": [
+    [
+      80,
+      170,
+      510
+    ],
+    [
+      1395,
+      1480,
+      510
+    ]
+  ],
+  "rib_highlight_candidates_x_at_y235": [
+    293,
+    357,
+    400,
+    428,
+    450,
+    590,
+    612
+  ],
+  "notes": "Body rows use gray < min(145, local side median - 25), nearest central contiguous run; green logo uses channel-ratio threshold."
+}

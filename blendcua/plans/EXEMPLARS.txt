@@ -1,0 +1,8 @@
+# Plans the planner may imitate. loop.py appends a task here when its run passes.
+# Only plans from passed runs, so a bad plan cannot seed the next one.
+Bat
+Chilli_plant
+Duck
+Gravestone
+Pillar
+Energy_can

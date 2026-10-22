@@ -1,0 +1,44 @@
+06_iron_gate   (run 06_iron_gate_run_001)
+==========================================
+Human judgement, written after looking at the reference photo, final_render.png, the top and
+front views, a few step screenshots and (lightly) the plan. This is what a person says is
+wrong, why it went wrong, and what to do about it. Severity: M = major (noticed at once),
+m = minor. Classes: plan / exec / review / views (a number the single photo could not give) /
+tool (the operation does not exist yet).
+
+1. DEFECTS
+
+#  sev  defect
+1  M    The inner scrollwork is not properly mapped to the actual gate design. The curls often
+        do not match the reference, are rounded out too much, and pieces of the design are
+        missing altogether. It reads as "a scrolled gate", not as this gate.
+2  M    The inner rods are round tubes, unlike the reference, which is flat bar.
+
+
+2. BLAME
+
+#  class                why
+1  plan + exec (+ tool) The scripting part, in both planning and execution, is to blame: the
+                        measurement scripts did not properly mark and identify the designs. They
+                        got a few points and a somewhat idea of each curve, so what was built is
+                        an approximation of the design, not the exact design. Nothing in the
+                        toolkit lifts a curve out of the image properly, so the executor drew
+                        spirals by hand from landmarks.
+2  exec + review        The plan even says "not round hoses"; the executor made tubes anyway and
+                        the review passed them.
+
+
+3. FIX
+
+#  fix
+1  A tool to map curves better: crop out a region of the reference, extract the curve from it,
+   build the curve, and then make a silhouette of the built curve over the reference to see how
+   well they match (or something better than that; definitely some better tool than a few
+   points). This would be helpful for other tasks too, anything with drawn or ornamental lines.
+2  Reviewer check on the bar profile: flat rectangular section, not round.
+
+
+4. OTHER
+   Overall the gate reads as the reference; it is the best of the six. The frame, mid rail and
+   lower bars are right. The defects are in the detail mapping of the ornament, not the
+   structure.

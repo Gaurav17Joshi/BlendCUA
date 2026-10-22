@@ -1,0 +1,7 @@
+{
+ "plate": "edited.png",
+ "source": "_step1_table_cleared.png",
+ "prompt": "The supplied image is a 3D render of a glossy pink cartoon mug of hot chocolate with a black cartoon face (two round eyes with highlights, two brows, a smile), whipped cream on top with chocolate sauce drizzled over the cream, cocoa dust, mini marshmallows on the cream and a striped candy cane leaning in the cup, on a plain wooden table with a blurred wooden background. Keep everything EXACTLY as it is -- same mug, same position, same size, same viewpoint, same face, same cream, same drizzle ON the cream, same marshmallows, same candy cane, same table and background -- with ONE change: remove all the chocolate sauce that has run over the rim and is dripping down the OUTSIDE of the mug (every drip and run on the pink body, front, sides and by the handle). Where the drips were, show the clean glossy pink mug surface and the clean rim. The chocolate on top of the cream and the dark hot chocolate surface inside the cup stay as they are. No text, no watermark.",
+ "seconds": 83.9,
+ "error": null
+}

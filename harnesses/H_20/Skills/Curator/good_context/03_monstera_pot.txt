@@ -1,0 +1,57 @@
+03_monstera_pot   (run 03_monstera_pot_run_001; rebuilds run_002, run_003)
+==========================================
+Human judgement, written after looking at the reference photo, final_render.png of the first
+build and of the two rebuilds, the checker's list and the blame agent's choices. This is what
+a person says is wrong, why it went wrong, and what to do about it. Severity: M = major
+(noticed at once), m = minor. Classes: plan / exec / review / views / tool.
+
+1. DEFECTS
+
+#  sev  defect
+1  m    The stem (trunk) is a bit too thick. Everything else about it is fine.
+2  m    The leaves are a bit too big, and they are all almost the same size. A little variance
+        in size would make it read as a plant instead of eight copies.
+
+   That is the whole list. The first build is about 90% there: pot, soil, roots, eight
+   fenestrated leaves, colours, framing — it does all the things mostly correctly. I like
+   run_001 more than run_003 (the second rebuild).
+
+
+2. BLAME
+
+#  class          why
+1  exec           The Step 3 action chose the trunk core radius; nothing in the plan asked for
+                  it that thick. A number the executor picked.
+2  plan + exec    The plan said "change the master leaf somewhat to make other leaves (for
+                  diversity)" and the executor duplicated one card at one scale. The plan did
+                  not say what should vary (size first, then shape); the executor did not vary
+                  anything visible.
+
+   What the checker did with this build: 12 defects, 10 of them "major" — flat card
+   geometry under the alpha (only visible in Solid shading, invisible in the render), the
+   canopy too short, the trunk, the roots, floating petiole ends, edge-on collapse from two
+   side views, colour and pot material. A person sees two minor things. Everything the
+   checker found was true and nearly none of it changed the picture. The blame agent then
+   spent the whole first round on the two things nobody can see (the hidden card rectangles
+   and a replan with generated plates), and only reached the trunk in round 2. The order
+   was wrong because the checker had no idea of visual weight.
+
+
+3. FIX
+
+#  fix
+1  Narrow the trunk core by about a third and give it a slight bend; a one-number change in
+   the Step 3 action. No new tool, no replan.
+2  Scale the eight leaf instances between about 0.8 and 1.1 of the master with a couple of
+   them smaller and lower, and rotate them so no two read as the same silhouette. The plan
+   should name the variance ("sizes from 0.8 to 1.1, no two equal") so the executor has a
+   number to hit.
+3  For the harness: when a build is this close, the round should be a small R1/R2 on the
+   one action, not a replan. The checker must rank by what a person sees in the final
+   render (2 major + 2 minor per subject, chosen by visual weight), and the blame agent
+   must pick the visible ones first.
+
+
+4. OTHER
+   The pot, soil, aerial roots, fenestrations and colours are fine. The rebuilt leaves of
+   run_002/run_003 (real folded laminae) are geometrically better and the picture is not.

@@ -1,0 +1,200 @@
+[
+  {
+    "name": "can_top_outer",
+    "group": "can",
+    "u": 0.5,
+    "v": 0.058594,
+    "px": [
+      512,
+      90
+    ],
+    "note": "topmost row of strict t=12 subject mask; outer silver rim"
+  },
+  {
+    "name": "can_bottom_outer",
+    "group": "can",
+    "u": 0.5,
+    "v": 0.955729,
+    "px": [
+      512,
+      1468
+    ],
+    "note": "bottommost row of strict t=12 subject mask; lower silver rim"
+  },
+  {
+    "name": "top_rim_left",
+    "group": "rim",
+    "u": 0.277344,
+    "v": 0.091146,
+    "px": [
+      284,
+      140
+    ],
+    "note": "left edge of strict t=12 mask at the broad rim span y=140"
+  },
+  {
+    "name": "top_rim_right",
+    "group": "rim",
+    "u": 0.728516,
+    "v": 0.091146,
+    "px": [
+      746,
+      140
+    ],
+    "note": "right edge of strict t=12 mask at the broad rim span y=140"
+  },
+  {
+    "name": "shoulder_left",
+    "group": "silhouette",
+    "u": 0.261719,
+    "v": 0.143229,
+    "px": [
+      268,
+      220
+    ],
+    "note": "left edge from strict t=12 subject row span at the shoulder-to-body transition"
+  },
+  {
+    "name": "shoulder_right",
+    "group": "silhouette",
+    "u": 0.743164,
+    "v": 0.143229,
+    "px": [
+      761,
+      220
+    ],
+    "note": "right edge from strict t=12 subject row span at the shoulder-to-body transition"
+  },
+  {
+    "name": "body_left_at_y300",
+    "group": "silhouette",
+    "u": 0.260742,
+    "v": 0.195312,
+    "px": [
+      267,
+      300
+    ],
+    "note": "left edge from strict t=12 subject row span in the straight body"
+  },
+  {
+    "name": "body_right_at_y300",
+    "group": "silhouette",
+    "u": 0.744141,
+    "v": 0.195312,
+    "px": [
+      762,
+      300
+    ],
+    "note": "right edge from strict t=12 subject row span in the straight body"
+  },
+  {
+    "name": "logo_leftmost",
+    "group": "logo",
+    "u": 0.290039,
+    "v": 0.222005,
+    "px": [
+      297,
+      341
+    ],
+    "note": "leftmost pixel of green upper-logo mask"
+  },
+  {
+    "name": "logo_rightmost",
+    "group": "logo",
+    "u": 0.702148,
+    "v": 0.238281,
+    "px": [
+      719,
+      366
+    ],
+    "note": "rightmost pixel of green upper-logo mask"
+  },
+  {
+    "name": "logo_topmost",
+    "group": "logo",
+    "u": 0.530273,
+    "v": 0.17513,
+    "px": [
+      543,
+      269
+    ],
+    "note": "topmost pixel of green upper-logo mask"
+  },
+  {
+    "name": "logo_bottommost",
+    "group": "logo",
+    "u": 0.507812,
+    "v": 0.611328,
+    "px": [
+      520,
+      939
+    ],
+    "note": "bottommost pixel of green upper-logo mask"
+  },
+  {
+    "name": "monster_word_top",
+    "group": "label",
+    "u": 0.362305,
+    "v": 0.655599,
+    "px": [
+      371,
+      1007
+    ],
+    "note": "first row of threshold gray>120, saturation<100 band for monster_word"
+  },
+  {
+    "name": "monster_word_bottom",
+    "group": "label",
+    "u": 0.441406,
+    "v": 0.731771,
+    "px": [
+      452,
+      1124
+    ],
+    "note": "last row of threshold gray>120, saturation<100 band for monster_word"
+  },
+  {
+    "name": "energy_word_top",
+    "group": "label",
+    "u": 0.697266,
+    "v": 0.742839,
+    "px": [
+      714,
+      1141
+    ],
+    "note": "first row of threshold gray>120, saturation<100 band for energy_word"
+  },
+  {
+    "name": "energy_word_bottom",
+    "group": "label",
+    "u": 0.478516,
+    "v": 0.770182,
+    "px": [
+      490,
+      1183
+    ],
+    "note": "last row of threshold gray>120, saturation<100 band for energy_word"
+  },
+  {
+    "name": "lower_Chinese_top",
+    "group": "label",
+    "u": 0.277344,
+    "v": 0.813151,
+    "px": [
+      284,
+      1249
+    ],
+    "note": "first row of threshold gray>120, saturation<100 band for lower_Chinese"
+  },
+  {
+    "name": "lower_Chinese_bottom",
+    "group": "label",
+    "u": 0.578125,
+    "v": 0.888672,
+    "px": [
+      592,
+      1365
+    ],
+    "note": "last row of threshold gray>120, saturation<100 band for lower_Chinese"
+  }
+]

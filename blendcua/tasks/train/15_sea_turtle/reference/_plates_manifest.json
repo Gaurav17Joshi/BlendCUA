@@ -1,0 +1,9 @@
+[
+ {
+  "plate": "side_plate.png",
+  "source": "reference.png",
+  "prompt": "The supplied image shows a green sea turtle swimming, seen from above and behind at a three-quarter angle: an oval carapace covered in large scutes (a row down the middle with larger ones either side), both front flippers spread out to the sides, both rear flippers, a short tail and the head with its scaled skin, on a plain grey background. Produce a straight-on SIDE profile: the camera is level with the turtle and looks at its LEFT side, the head pointing to the left of the frame and the tail to the right, so the carapace reads as a low dome over the flat pale plastron, the head and neck extend forward at the left, the near front flipper sweeps out toward the camera and down, the far one is mostly hidden behind the body, and the near rear flipper shows at the right. Pure profile: neither the top of the shell nor the underside is seen face-on. This is a modelling reference plate, not an art piece. Keep the SAME turtle: same proportions, same shell pattern and colours, same spread pose of the flippers. Re-project the camera as instructed; do not simply reproduce the original viewpoint. Long-lens, near-orthographic camera so the view reads flat. Centred and complete in frame with a small margin, on a flat neutral light-grey studio background (RGB about 200/200/200), no shadow, no water, no text, no watermark, no second copy of the turtle.",
+  "seconds": 73.9,
+  "error": null
+ }
+]

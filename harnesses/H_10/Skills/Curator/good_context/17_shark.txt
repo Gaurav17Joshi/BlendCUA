@@ -1,0 +1,36 @@
+17_shark   (run 17_shark_run_001)
+==========================================
+Human judgement, written after looking at the reference photo, final_render.png, the top and
+front views, a few step screenshots and (lightly) the plan. This is what a person says is
+wrong, why it went wrong, and what to do about it. Severity: M = major (noticed at once),
+m = minor. Classes: plan / exec / review / views (a number the single photo could not give) /
+tool (the operation does not exist yet).
+
+1. DEFECTS
+
+#  sev  defect
+1  M    The big defect is the mouth: the gum and teeth part is awkwardly sticking out on one side
+        of the shark's body instead of being a mouth in the head.
+
+
+2. BLAME
+
+#  class          why
+1  plan           The plan says to build it this way (separate jaw shells, gums and teeth as
+                  parts) and it should not have. It should have said: make a cavity in the mouth
+                  region of the head, then put the teeth inside it.
+
+
+3. FIX
+
+#  fix
+1  This is something other tasks will also need, so make a tool: on a given mesh, you draw a cut
+   in the side view of the object (just like texture painting or sculpting strokes are given),
+   and that part is cut out from the side. Later tool calls can then expand the cut (deepen it,
+   shape it). After that the teeth can be placed inside the cavity that formed. No gums at all;
+   they are too hard to make well and the photo texture carries the colour anyway. The dog's
+   mouth needs the same tool.
+
+
+4. OTHER
+   The body, the countershading and the gills are fine.

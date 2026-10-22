@@ -1,0 +1,11 @@
+{
+  "prompt": "The image shows a stylised cauldron: a dark blue-black pot with a thick rim, a gold band with small gold studs, two angular loop handles, curled feet, glowing green liquid, three purple tentacles with pale suckers, standing on a round base of cracked light grey stone slabs. Replace the dark blurred background and the reflections on the floor with one plain, flat, even dark grey studio background; the stone base rests on a plain matte surface of the same grey with only a soft contact shadow. Keep the cauldron, tentacles, liquid and stone base exactly as they are: same shape, proportions, colours, lighting and camera angle, same place and size in the frame. No text, no watermark.",
+  "size": "1024x1536",
+  "seconds": 86.7,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "made": "2026-09-19",
+  "note": "reference.png: background cleaned",
+  "source": "demon_cauldron/reference/original.png"
+}

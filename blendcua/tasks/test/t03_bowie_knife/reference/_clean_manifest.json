@@ -1,0 +1,23 @@
+{
+  "step1_clean": {
+    "prompt": "The image shows a bowie knife with a steel blade (etched maker's mark and engraving on the blade, three thumb notches on the spine), a brass guard and a burl-wood handle with dark streaks. Remove the large cream 'TEXTURING TECHNIQUES' title text at the top left, the Blender logo at the bottom right, the video-player icons along the bottom edge and the menu icon at the top right, and remove the dark horizontal bands at the top and bottom. Put the knife on one plain, flat, even dark grey studio background with at most a soft shadow. Keep the etching and maker's mark on the blade, since they are part of the knife. Keep the object itself exactly as it is: the same shape, proportions, pose, colours, materials, surface detail, lighting and camera angle, in the same place and at the same size in the frame. Do not redesign, restyle, smooth, sharpen or re-light the object, and do not add anything. No text, no logo, no watermark, no frame.",
+    "size": "1536x1024",
+    "seconds": 72.7,
+    "model": "gpt-image-2",
+    "call": "images.edit",
+    "quality": "high",
+    "source": "reference/original.png",
+    "made": "2026-09-19"
+  },
+  "step2_sharpen": {
+    "prompt": "Re-render this exact bowie knife as a crisp, sharp, high-resolution product photograph. Keep everything the same: the blade shape, the three thumb notches, the grind line, the etched maker's mark and engraving, the brass guard, the burl-wood handle with its dark streaks, the materials, colours, lighting, camera angle, and the knife's place and size in the frame, on the same plain dark grey background. Only improve sharpness and detail: clean edges, crisp etching, visible brushed-steel and wood-grain texture, no blur, no compression artefacts. No text.",
+    "size": "2048x1152",
+    "seconds": 71.4,
+    "model": "gpt-image-2",
+    "call": "images.edit",
+    "quality": "high",
+    "made": "2026-09-19",
+    "note": "reference.png: step 1 output re-rendered sharper at 2048x1152",
+    "source": "bowie_knife/reference.png"
+  }
+}

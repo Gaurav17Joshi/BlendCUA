@@ -1,0 +1,32 @@
+[
+ {
+  "option": "F1",
+  "out": "option_F1.png",
+  "inputs": [
+   "option_E2.png"
+  ],
+  "prompt": "The supplied image is a 3D cartoon robot character seen straight from the front: a retro TV set for a head with a glowing face and two antennae, an orange puffy zip-up jacket for the body, thin dark blue rod arms coming out of the sleeves and ending in chrome ball hands with three curved claw fingers, and instead of legs a short grey metal box chassis under the jacket hem with a single large black ribbed tyre half hidden inside it, resting on the ground, on a plain blue backdrop. Reproduce this image EXACTLY -- same character, same proportions, same size, same framing, same head, same jacket, same chassis, same hands, same backdrop, same lighting -- with only these two changes: (1) WHEEL: the tyre is currently turned slightly so part of its side face and hub shows. Show it instead seen DEAD-ON from the front, its axle running exactly left-to-right, so only the black ribbed tread band faces the camera as a symmetrical rounded rectangle under the chassis, with no side face and no hub visible, the tread ribs running horizontally across it. (2) ARMS: the dark blue rod forearms that come out of the jacket sleeves are too long. Shorten each rod to about half its current length, so the chrome ball hands hang just below the sleeve cuffs, level with the top of the chassis, with the same slight outward angle. Nothing else changes. No text, no watermark.",
+  "seconds": 79.4,
+  "error": null
+ },
+ {
+  "option": "F2",
+  "out": "option_F2.png",
+  "inputs": [
+   "option_E2.png"
+  ],
+  "prompt": "The supplied image is a 3D cartoon robot character seen straight from the front: a retro TV set for a head with a glowing face and two antennae, an orange puffy zip-up jacket for the body, thin dark blue rod arms coming out of the sleeves and ending in chrome ball hands with three curved claw fingers, and instead of legs a short grey metal box chassis under the jacket hem with a single large black ribbed tyre half hidden inside it, resting on the ground, on a plain blue backdrop. Reproduce this image EXACTLY -- same character, same proportions, same size, same framing, same head, same jacket, same chassis, same hands, same backdrop, same lighting -- with only these two changes: (1) WHEEL: the tyre is currently turned slightly so part of its side face and hub shows. Show it instead seen DEAD-ON from the front, its axle running exactly left-to-right, so only the black ribbed tread band faces the camera as a symmetrical rounded rectangle under the chassis, with no side face and no hub visible, the tread ribs running horizontally across it. (2) ARMS: the dark blue rod forearms that come out of the jacket sleeves are too long. Shorten each rod to about half its current length, so the chrome ball hands hang just below the sleeve cuffs, level with the top of the chassis, with the same slight outward angle. Nothing else changes. No text, no watermark.",
+  "seconds": 79.8,
+  "error": null
+ },
+ {
+  "option": "F3",
+  "out": "option_F3.png",
+  "inputs": [
+   "option_E2.png"
+  ],
+  "prompt": "The supplied image is a 3D cartoon robot character seen straight from the front: a retro TV set for a head with a glowing face and two antennae, an orange puffy zip-up jacket for the body, thin dark blue rod arms coming out of the sleeves and ending in chrome ball hands with three curved claw fingers, and instead of legs a short grey metal box chassis under the jacket hem with a single large black ribbed tyre half hidden inside it, resting on the ground, on a plain blue backdrop. Reproduce this image EXACTLY -- same character, same proportions, same size, same framing, same head, same jacket, same chassis, same hands, same backdrop, same lighting -- with only these two changes: (1) WHEEL: the tyre is currently turned slightly so part of its side face and hub shows. Show it instead seen DEAD-ON from the front, its axle running exactly left-to-right, so only the black ribbed tread band faces the camera as a symmetrical rounded rectangle under the chassis, with no side face and no hub visible, the tread ribs running horizontally across it. (2) ARMS: the dark blue rod forearms that come out of the jacket sleeves are too long. Shorten each rod to about half its current length, so the chrome ball hands hang just below the sleeve cuffs, level with the top of the chassis, with the same slight outward angle. Nothing else changes. No text, no watermark.",
+  "seconds": 78.5,
+  "error": null
+ }
+]

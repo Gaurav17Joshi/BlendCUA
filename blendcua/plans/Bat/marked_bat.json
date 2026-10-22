@@ -1,0 +1,424 @@
+{
+  "source": "Bat.jpg",
+  "image_size": [
+    2081,
+    2601
+  ],
+  "convention": "u,v are 0-1 fractions of the SOURCE photo, origin top-left, v growing DOWN. Multiply by image_size for pixels. Corners are listed clockwise from top-left.",
+  "boxes": {
+    "head": {
+      "measured_from": "measured",
+      "note": "Snout tip to the back of the skull. Includes the ear (top edge 0.536 IS the ear tip; the cranium alone tops out at v 0.556) and the hanging chin fur at the bottom.",
+      "corners_uv": [
+        [
+          0.2523,
+          0.5359
+        ],
+        [
+          0.3522,
+          0.5359
+        ],
+        [
+          0.3522,
+          0.6278
+        ],
+        [
+          0.2523,
+          0.6278
+        ]
+      ],
+      "corners_px": [
+        [
+          525,
+          1394
+        ],
+        [
+          733,
+          1394
+        ],
+        [
+          733,
+          1633
+        ],
+        [
+          525,
+          1633
+        ]
+      ],
+      "width_uv": 0.0999,
+      "height_uv": 0.0919,
+      "width_px": 208,
+      "height_px": 239
+    },
+    "torso": {
+      "measured_from": "anatomical, trimmed",
+      "note": "Torso only — NOT the whole body. The BatBody mesh is torso + head, which is head box + this one. TRIMMED so the four crop windows do not overlap: it starts where the head box ends and stops where the leg box begins. The torso ITSELF runs u 0.325 (collar) to u 0.716 (rump tip) — 814 px — tucked under those two boxes at each end, so take length ratios from the landmarks, not from this box. Top and bottom are fur/membrane boundaries a sky segmentation cannot see, read by eye off 14x crops; the top edge is shared with wing_long's bottom edge — that line IS the flank.",
+      "corners_uv": [
+        [
+          0.3522,
+          0.545
+        ],
+        [
+          0.6997,
+          0.545
+        ],
+        [
+          0.6997,
+          0.628
+        ],
+        [
+          0.3522,
+          0.628
+        ]
+      ],
+      "corners_px": [
+        [
+          733,
+          1418
+        ],
+        [
+          1456,
+          1418
+        ],
+        [
+          1456,
+          1633
+        ],
+        [
+          733,
+          1633
+        ]
+      ],
+      "width_uv": 0.3475,
+      "height_uv": 0.083,
+      "width_px": 723,
+      "height_px": 216
+    },
+    "leg": {
+      "measured_from": "measured",
+      "note": "BOTH legs and feet. The photo stacks left and right leg by perspective, so they straddle the body axis — build one and mirror it, using the average offset.",
+      "corners_uv": [
+        [
+          0.6997,
+          0.5398
+        ],
+        [
+          0.8179,
+          0.5398
+        ],
+        [
+          0.8179,
+          0.6444
+        ],
+        [
+          0.6997,
+          0.6444
+        ]
+      ],
+      "corners_px": [
+        [
+          1456,
+          1404
+        ],
+        [
+          1702,
+          1404
+        ],
+        [
+          1702,
+          1676
+        ],
+        [
+          1456,
+          1676
+        ]
+      ],
+      "width_uv": 0.1182,
+      "height_uv": 0.1046,
+      "width_px": 246,
+      "height_px": 272
+    },
+    "wing_long": {
+      "measured_from": "measured (bottom edge anatomical)",
+      "note": "The LONGER wing (upper in the photo) — arm, all five fingers and membrane. Its leftmost point (u 0.328) is the free-hanging thumb claw at v 0.301, not the leading edge. The bottom edge is where the membrane meets torso fur, which the sky segmentation cannot see.",
+      "corners_uv": [
+        [
+          0.3277,
+          0.0392
+        ],
+        [
+          0.7415,
+          0.0392
+        ],
+        [
+          0.7415,
+          0.545
+        ],
+        [
+          0.3277,
+          0.545
+        ]
+      ],
+      "corners_px": [
+        [
+          682,
+          102
+        ],
+        [
+          1543,
+          102
+        ],
+        [
+          1543,
+          1418
+        ],
+        [
+          682,
+          1418
+        ]
+      ],
+      "width_uv": 0.4138,
+      "height_uv": 0.5058,
+      "width_px": 861,
+      "height_px": 1316
+    }
+  },
+  "landmarks": {
+    "snout_tip": {
+      "uv": [
+        0.2528,
+        0.594
+      ],
+      "px": [
+        526,
+        1545
+      ],
+      "group": "head",
+      "note": "Leftmost pixel of the muzzle. Measured; was (525,1550)."
+    },
+    "eye": {
+      "uv": [
+        0.285,
+        0.5798
+      ],
+      "px": [
+        593,
+        1508
+      ],
+      "group": "head",
+      "note": "The specular glint on the eye, on the upper edge of the muzzle 35% of the way from snout to ear. The eye itself is not resolvable — the head is 208px and backlit — so this glint is the best available fix. Was (566,1506), which sat in the dark cheek with nothing there."
+    },
+    "ear_tip": {
+      "uv": [
+        0.3292,
+        0.5359
+      ],
+      "px": [
+        685,
+        1394
+      ],
+      "group": "head",
+      "note": "Topmost pixel of the ear. Measured; was (668,1394) — 17px too far left."
+    },
+    "shoulder": {
+      "uv": [
+        0.3551,
+        0.5459
+      ],
+      "px": [
+        739,
+        1420
+      ],
+      "group": "head",
+      "note": "Top of the golden collar fur where the neck meets the torso — the torso box's front-top corner. NOT the wing's arm root, which is `arm_root` at (781,1385), 46px up-right of this."
+    },
+    "rump_tip": {
+      "uv": [
+        0.716,
+        0.5779
+      ],
+      "px": [
+        1490,
+        1503
+      ],
+      "group": "head",
+      "note": "UNCHANGED and soft: the rump fur blends into the thigh with no silhouette edge to measure, and the plan's torso ratios (814px long, 3.77x, head = 0.215 of length) are all built on u 0.716. Treat as the agreed rear reference, not a measured point."
+    },
+    "ankle": {
+      "uv": [
+        0.7549,
+        0.5802
+      ],
+      "px": [
+        1571,
+        1509
+      ],
+      "group": "leg",
+      "note": "Unchanged."
+    },
+    "claw_tip": {
+      "uv": [
+        0.8174,
+        0.5729
+      ],
+      "px": [
+        1701,
+        1490
+      ],
+      "group": "leg",
+      "note": "Unchanged."
+    },
+    "arm_root": {
+      "uv": [
+        0.4426,
+        0.5406
+      ],
+      "px": [
+        921,
+        1406
+      ],
+      "group": "arm",
+      "note": "STEP 3 — WHERE THE ARM MEETS THE TORSO. Put the BatArm seed here, on BatBody's surface. Found by tracking the darkest pixel per row down the humerus shadow to where it reaches the golden flank fur. It sits 12px above the torso box's top edge (y 1418), which the box notes call the flank — so the two agree. NOT the wing's leading edge: that meets the body 140px further forward at `propatagium_root`, which is the membrane's attachment, not the bone's."
+    },
+    "elbow": {
+      "uv": [
+        0.4805,
+        0.4748
+      ],
+      "px": [
+        1000,
+        1235
+      ],
+      "group": "arm",
+      "note": "STEP 3. Humerus/forearm joint, and INVISIBLE in the silhouette — the propatagium spans shoulder-to-wrist and hides the bend, so the outline runs almost straight past it. Found as the vertex of the bone shadow: tracked row by row, x climbs 850 -> 1000 from the wrist down, peaks here, then falls back to 921 at the body. That reversal IS the elbow, and there is a visible highlight on the joint just outboard of it. Gives forearm 454px, humerus 188px, and the humerus is 14% of the shoulder-to-wingtip span — the 'small fraction' step 3 asks for."
+    },
+    "propatagium_root": {
+      "uv": [
+        0.3753,
+        0.5325
+      ],
+      "px": [
+        781,
+        1385
+      ],
+      "group": "memb",
+      "note": "STEP 4. Where the wing's LEADING EDGE meets the body — the front attachment of the propatagium, on the neck/shoulder fur. This is the membrane's front body-side corner. It is 140px forward of `arm_root`: the skin attaches ahead of the bone, which is what makes the leading edge look straight from shoulder to wrist."
+    },
+    "wrist": {
+      "uv": [
+        0.3907,
+        0.3156
+      ],
+      "px": [
+        813,
+        821
+      ],
+      "group": "arm",
+      "note": "STEP 3 — THE BRANCH POINT. All five digits fan from here and the thumb bone arrives from its claw. This is where the tagged finger_id faces go. The silhouette notch is ~11px left at (802,843); this point is the bone convergence just inside the leading edge."
+    },
+    "leading_edge_bulge": {
+      "uv": [
+        0.3969,
+        0.4037
+      ],
+      "px": [
+        826,
+        1050
+      ],
+      "group": "arm",
+      "note": "STEP 4. Outermost point of the leading edge between root and wrist (x peaks at 826 here, against 813 at the wrist and 781 at the root). The propatagium bows out to here — the membrane's leading edge should pass through it, not run straight from shoulder to wrist."
+    },
+    "thumb_claw": {
+      "uv": [
+        0.3292,
+        0.301
+      ],
+      "px": [
+        685,
+        783
+      ],
+      "group": "digit",
+      "note": "STEP 3. Digit I — the short free-hanging thumb, dropping from the wrist into open sky past the membrane edge. Verified: leftmost bat pixel in the wing band."
+    },
+    "wingtip": {
+      "uv": [
+        0.5829,
+        0.0392
+      ],
+      "px": [
+        1213,
+        102
+      ],
+      "group": "digit",
+      "note": "STEP 3. Digit III's tip — the long fused finger, and the topmost pixel of the whole bat. Verified unchanged."
+    },
+    "digit4_tip": {
+      "uv": [
+        0.6271,
+        0.1453
+      ],
+      "px": [
+        1305,
+        378
+      ],
+      "group": "digit",
+      "note": "STEP 3. Digit IV — the FIRST scalloped peak down the trailing edge from the wingtip. Local maximum of trailing-edge x: 1293 at y348 -> 1305 at y378 -> 1295 at y438."
+    },
+    "digit5_tip": {
+      "uv": [
+        0.6929,
+        0.3068
+      ],
+      "px": [
+        1442,
+        798
+      ],
+      "group": "digit",
+      "note": "STEP 3. Digit V — the SECOND and last scalloped peak. Local maximum: 1434 at y768 -> 1442 at y798 -> 1435 at y828. Past this the trailing edge runs smooth and boneless to the body, so this is the last finger. Digit II is a short strut into the membrane with no tip on the margin, so it is deliberately not marked."
+    },
+    "scallop_34": {
+      "uv": [
+        0.5872,
+        0.0761
+      ],
+      "px": [
+        1222,
+        198
+      ],
+      "group": "memb",
+      "note": "STEP 4. Membrane low point between digit III (the wingtip) and digit IV. The trailing edge must dip in to here between those two tips."
+    },
+    "scallop_45": {
+      "uv": [
+        0.6223,
+        0.1742
+      ],
+      "px": [
+        1295,
+        453
+      ],
+      "group": "memb",
+      "note": "STEP 4. Membrane low point between digit IV and digit V. Note it sits far closer to IV (75px) than to V (345px) — the scallops are not evenly spaced, so do not space them evenly."
+    },
+    "wing_rear_attach": {
+      "uv": [
+        0.7737,
+        0.5659
+      ],
+      "px": [
+        1610,
+        1472
+      ],
+      "group": "memb",
+      "note": "STEP 4. Where the free trailing edge ends and the membrane meets the leg, just above the ankle. The membrane's rear body-side corner belongs on the body surface at or inside this point."
+    }
+  },
+  "landmark_groups": {
+    "head": "Head and torso reference points.",
+    "leg": "Both legs (the photo stacks them); unchanged from the original set.",
+    "arm": "STEP 3 arm chain, in order: arm_root -> elbow -> wrist.",
+    "digit": "STEP 3 finger tips, in fan order off the wrist: thumb_claw (digit I, free-hanging), wingtip (digit III, the long fused one), digit4_tip, digit5_tip. Digit II is a short strut into the membrane and has no tip on the margin.",
+    "memb": "STEP 4 membrane shape: the scallops are the LOW points between finger tips, and wing_rear_attach is the body-side end of the trailing edge."
+  },
+  "landmark_note": "All wing landmarks describe the LONG (upper) wing only — the one the build traces before mirroring."
+}

@@ -1,0 +1,10 @@
+{
+  "prompt": "The image shows a stylised hand-painted hammer standing upright: a large chamfered grey stone-like block head with painted cracks and chips, a dark steel collar under the head, a painted wooden handle with grain and knots, and a steel pommel cap at the bottom. It is a Blender viewport screenshot. Remove the viewport grid, the red and green axis lines, the small grey untextured hammer model at the left, the white mouse-pointer arrow and the red and white 3D-cursor crosshair beside the handle. Put the hammer on one plain, flat, even dark grey background. Keep the object itself exactly as it is: the same shape, proportions, pose, colours, materials, surface detail, lighting and camera angle, in the same place and at the same size in the frame. Do not redesign, restyle, smooth, sharpen or re-light the object, and do not add anything. No text, no logo, no watermark, no frame.",
+  "size": "1024x1536",
+  "seconds": 67.8,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "source": "reference/original.png",
+  "made": "2026-09-19"
+}

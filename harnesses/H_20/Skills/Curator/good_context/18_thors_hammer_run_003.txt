@@ -1,0 +1,50 @@
+18_thors_hammer_run_003   (run 18_thors_hammer_run_003)
+==========================================
+Human judgement, written after looking at the reference photo, final_render.png, the top and
+front views, a few step screenshots and (lightly) the plan. This is what a person says is
+wrong, why it went wrong, and what to do about it. Severity: M = major (noticed at once),
+m = minor. Classes: plan / exec / review / views (a number the single photo could not give) /
+tool (the operation does not exist yet).
+
+1. DEFECTS
+
+#  sev  defect
+1  M    The head's shape is off. In our output it is a simple rectangular cuboid, whereas the
+        original is much more complex: width-wise it has bigger and smaller parts, and a slant at
+        the ends.
+2  M    The proportions are off: the wooden handle is shorter in our output than in the
+        reference, and the uplift of the ridges on the red wrap is a bit too uniform.
+3  m    The texture on the head is less than in the reference.
+
+
+2. BLAME
+
+#  class          why
+1  plan + exec    In the plan it made a straight front view with gpt-image-2
+                  (plan/scripts/synth_plate_measurements.png) but then did not use it: the head
+                  is just a badly made rectangle instead of a shape measured from that view. All
+                  the measurements were done on the actual tilted reference instead of a 50-50
+                  split between the two. The straight front view was made precisely because it is
+                  easier to get measurements from (tracing the head, for instance), so it should
+                  have been used much more.
+2  plan           Once the head shape has been got from the front view, the proportions (head
+                  size to handle size and so on) should have been taken from the actual image and
+                  used to scale everything to fit.
+3  exec           Not enough crack and wear detail put on the head.
+
+
+3. FIX
+
+#  fix
+1  Plan step 1: trace the head outline (the stepped width, the slanted ends) from the front
+   plate, not from the tilted photo. Durable: a planner skill that says when a straight plate
+   exists, measure shape on the plate and proportions on the photo, and cite which was used for
+   each number.
+2  State the handle-to-head length ratio from the reference in the plan; reviewer checks the
+   built ratio against it.
+3  A crack coverage target for the head so "a few cracks" is not enough.
+
+
+4. OTHER
+   A big improvement on run_001: correct block, bands wrap around and carry rivets, handle in
+   the right place.

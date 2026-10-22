@@ -1,0 +1,7 @@
+name: blendcua_tools
+version: 1.0.0
+description: "Native write_and_run tool for BlendCUA — writes one Blender action file, runs it against the live Blender server, and returns the resulting screenshot as a real inline image the model can see on its next turn."
+author: BlendCUA
+kind: standalone
+provides_tools:
+  - write_and_run

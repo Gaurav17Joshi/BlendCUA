@@ -1,0 +1,64 @@
+20_low_poly_dog   (run 20_low_poly_dog_run_001)
+==========================================
+Human judgement, written after looking at the reference photo, final_render.png, the top and
+front views, a few step screenshots and (lightly) the plan. This is what a person says is
+wrong, why it went wrong, and what to do about it. Severity: M = major (noticed at once),
+m = minor. Classes: plan / exec / review / views (a number the single photo could not give) /
+tool (the operation does not exist yet).
+
+1. DEFECTS
+
+#  sev  defect
+1  M    The upper body is weird, blocky and flaky. It does not read as a nice low-poly object,
+        where the facets are clean and the form is continuous. The seams where head, neck and
+        body meet are the ugly part: they are three separate solids butted together.
+2  M    The legs needed more work; they are made with minimum effort. The feet are super basic
+        cuboids that are clearly a separate model sitting under the leg instead of being a
+        continuation of it, and that is what makes them look bad.
+3  M    The mouth and tongue. Same issue as the shark mouth: the mouth should have been a cavity
+        cut into the head part of the mesh, with the tongue inside it. Instead the tongue is a
+        piece stuck on one side of the head, the side facing us, so it only works from the
+        camera's angle.
+4  m    The ears sink into the head and are the same colour as the head, so you can hardly see
+        them. They are also very basic; at least a small curve would have helped.
+
+
+2. BLAME
+
+#  class          why
+1  plan + exec    The thing about low-poly objects is that the majority of the piece is built as
+                  one mesh structure, and the supporting things are added on top of it. Here the
+                  plan lofts the torso, neck and head as three separate solids: see
+                  step_001/screenshots/action_05_dog_core_outline_base.png, _outline.png and
+                  _silhouette.png. It did a good job following the photo: the head is nice, the
+                  body is nice. But by making them separately their joins came out weird. The
+                  outline was right; the construction was wrong.
+2  exec           Legs and feet were built as separate parts with minimum effort. The feet should
+                  be rounded appendages at the bottom of the legs, part of the same mesh, not a
+                  cuboid tacked on. More effort should have gone into the limbs.
+3  plan + exec    Mouth and tongue built to one side, toward the camera, to look like the photo
+                  rather than to be a mouth. This is the same mistake as the shark mouth
+                  (17_shark) and the sneaker laces (14_sneaker): things are built on the visible
+                  side instead of where they belong on the object.
+4  exec           Ears pushed into the head with no check that they read from the side or from
+                  the front.
+
+
+3. FIX
+
+#  fix
+1  Plan step 1: one continuous body mesh from head to rump (head, neck, torso as one loft with
+   stations along the spine), not three lofts. Durable: a planner and executor skill that says
+   "low poly = one main mesh; add-ons only for real attachments (legs, ears, tail)", and a
+   reviewer check that the core is one closed mesh with no butt joints.
+2  Loft each leg down into a rounded foot within the same mesh, so the foot is the end of the
+   leg. Reviewer check: no limb may be a capped cylinder with a box under it.
+3  A cut tool (see 17_shark): cut the mouth into the head mesh from the side view, then place
+   the tongue inside the cavity on the centreline so it reads from any angle.
+4  Ears as small curved flaps, slightly different shade so they read against the head.
+
+
+4. OTHER
+   The side outline of the body and head is good. The problem is how the parts were assembled,
+   not where they are. If the same outline had been built as one mesh with the limbs flowing
+   out of it, this would be a decent low-poly dog.

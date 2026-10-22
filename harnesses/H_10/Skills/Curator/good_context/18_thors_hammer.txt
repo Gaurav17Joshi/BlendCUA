@@ -1,0 +1,43 @@
+18_thors_hammer   (run 18_thors_hammer_run_001)
+==========================================
+Human judgement, written after looking at the reference photo, final_render.png, the top and
+front views, a few step screenshots and (lightly) the plan. This is what a person says is
+wrong, why it went wrong, and what to do about it. Severity: M = major (noticed at once),
+m = minor. Classes: plan / exec / review / views (a number the single photo could not give) /
+tool (the operation does not exist yet).
+
+1. DEFECTS
+
+#  sev  defect
+1  M    One important issue: the handle is stuck to the side (the face) of the hammer head instead
+        of coming out of its bottom, the way a hammer actually is. A stupid mistake.
+2  M    The shape of the hammer head is not accurate at all, and the golden bands are stuck on
+        weirdly. Instead of forming a loop around the head, the head was made flat and the gold
+        strip was twisted to copy the look of a band going around. It copied the picture instead
+        of building the object.
+
+   The red wrap on the handle is nice.
+
+
+2. BLAME
+
+#  class          why
+1  plan (views)   I am not sure exactly what to blame (I did not read the plan closely), but it is
+                  definitely the plan: with a tilted reference like this, it should have used
+                  gpt-image-2 to make the hammer straight, and then worked from that. Working
+                  from the tilted photo is what put the handle on the face of the head.
+2  plan (views)   Same as above. Because the hammer is tilted, it did not put in the effort to
+                  research the real shape of the head, or the fact that the golden band goes
+                  around the head.
+
+
+3. FIX
+
+#  fix
+1  Get better gpt-image-2 perspectives: make the hammer upright (front, side, top), then properly
+   trace the hammer head from the front plate.
+2  Bands built as closed loops around the block; the handle enters the bottom face of the head.
+   Reviewer check from the side view: the handle axis is perpendicular to the head's long axis.
+
+
+4. OTHER

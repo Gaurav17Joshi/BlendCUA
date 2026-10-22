@@ -1,0 +1,11 @@
+{
+  "prompt": "The supplied image shows a low-poly flat-shaded man: a faceted bald head with two small black dot eyes and no other facial features, a big chest, a white shirt with the collar up and sleeves rolled to the elbows, a red tie, a black belt, dark blue trousers, black shoes, bare forearms and hands. Produce a straight-on FRONT elevation of the same character: the camera is level with his chest and looks straight at his front, so the body is bilaterally symmetrical; he stands upright, feet slightly apart, arms hanging relaxed at his sides slightly away from the body so the gap between arm and torso is visible. This is a modelling reference plate, not an art piece. Keep the SAME character identity, proportions, colours, flat-shaded faceted low-poly look and facet layout as the supplied image; do not restyle, smooth or redesign it. Use a long-lens, near-orthographic level camera so the view reads flat. Whole figure centred in frame with a small margin, on a PURE WHITE background - pure white, RGB 255/255/255, no grey tone, no gradient, no vignette and no shadow. No text, no labels, no floor, no extra props, no second copy.",
+  "size": "1024x1536",
+  "seconds": 72.7,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "made": "2026-09-19",
+  "note": "front_plate.png",
+  "source": "low_poly_clark_kent/reference/original.png"
+}

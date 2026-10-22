@@ -1,0 +1,11 @@
+{
+  "prompt": "The supplied image shows a black leather office chair: a tall upholstered backrest with horizontal stitched channels, a seat cushion with finer channels and a rounded front edge, two flat-sided black arms each an open loop from under the seat up to a padded armrest cap, a height-adjust lever under the seat, a chrome gas lift in a black cylinder, a five-spoke black base and five twin-wheel castors on chrome stems. Produce a straight-on FRONT elevation of the same chair: the camera is level with the seat and looks straight at the front of the chair, so it is bilaterally symmetrical, both arms read as mirror images, the backrest is seen face-on behind the seat, and the base shows one spoke pointing straight at the camera. Keep the SAME chair identity, proportions, materials and colours; do not restyle or redesign it. Use a long-lens, near-orthographic level camera so the view reads flat. Whole chair centred in frame with a small margin, on a PURE WHITE background - pure white, RGB 255/255/255, no grey tone, no gradient, no vignette and no shadow. No text, no labels, no floor, no extra props.",
+  "size": "1024x1536",
+  "seconds": 70.5,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "made": "2026-09-19",
+  "source": "reference/original.png",
+  "note": "front_plate.png"
+}

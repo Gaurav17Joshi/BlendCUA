@@ -1,0 +1,11 @@
+{
+  "prompt": "The image shows a glossy black chess knight on a pale blue backdrop: a turned base of stacked rings and a rounded bulge, and a stylised horse head with a long curved neck, an open mouth, a nostril, an eye and a tall flat mane sweeping back over the head. Its lacquer is so mirror-like that it reflects trees, branches and windows across the neck, head and base, which hides the form. Remove those environment reflections: render it as a clean black gloss piece lit by soft studio lights, so the surfaces show only smooth soft highlights and gradients that follow the shape, with the edges and the rings of the base still clearly readable. Keep the piece itself exactly as it is: same shape, proportions, pose, camera angle, place and size in the frame, and the same plain pale blue backdrop. No text, no watermark.",
+  "size": "1024x1536",
+  "seconds": 79.3,
+  "model": "gpt-image-2",
+  "call": "images.edit",
+  "quality": "high",
+  "made": "2026-09-19",
+  "source": "reference/original.png",
+  "note": "reference.png: environment reflections removed"
+}
